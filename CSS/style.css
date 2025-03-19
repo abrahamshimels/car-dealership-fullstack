@@ -1,0 +1,875 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000000;
+}
+
+.top {
+  display: flex;
+  justify-content: space-evenly;
+}
+button {
+  border: none;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+body{
+  color:#f3a404;
+}
+/* header  */
+header{
+  position: static;
+  margin-bottom: 50px;
+}
+.header-nav {
+  position:fixed;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(248, 223, 190, 0.985);
+  backdrop-filter: blur(1px);
+  height: 50px;
+  z-index: 4;
+
+}
+.header-nav a,div {
+  color: #fc4203;
+  flex-grow: 1;
+  text-align: center;
+}
+.nav-link{
+  display: flex;
+  background-color: #ff8400;
+  align-items: center;
+  justify-content: center;
+   padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.contact-seller {
+  background-color: rgb(222, 142, 12);
+  border-radius: 3px;
+}
+a {
+  text-decoration: none;
+}
+.phone-wrapper {
+  display: flex;
+  margin: 10px;
+}
+
+.location-wrapper {
+  margin: 10px;
+}
+.phone-icon {
+  font-size: 24px;
+  color: rgb(185, 183, 183);
+  margin-right: 10px;
+  font-size: small;
+  margin: 10px;
+}
+.instagram-icon {
+  font-size: 24px;
+  color: #e1306c;
+  margin: 10px;
+  transition: color 0.3s ease;
+}
+
+.instagram-icon:hover {
+  color: #8c3064;
+}
+.social-icon.facebook {
+  color: #4979da;
+  font-size: 24px;
+  margin: 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icon.facebook:hover {
+  color: #2c426a;
+}
+
+.social-icon.x {
+  color: #1da1f2;
+  font-size: 24px;
+  margin: 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icon.x:hover {
+  color: #2d5c83;
+}
+.cart-icon {
+  font-size: 20px;
+  color: #4caf50;
+  transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+  color: #388e3c;
+}
+
+/* banner style */
+.banner {
+  background-image: url("../Resource/Images/R35-GTR-EDIT-4K-ezgif.com-video-to-gif-converter.gif");
+  background-repeat: no-repeat;
+  height: 38rem;
+  background-position: center;
+  background-size: cover;
+  color : red;
+}
+.heade-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80%;
+  padding-top:100px;
+}
+.heade-text h1 {
+  color: rgb(233, 42, 42);
+  font-size: clamp(12px, 3vw, 38px);
+}
+.heade-text .second {
+  color: white;
+}
+.lined {
+  border-left: 2px solid #f10303;
+  height: clamp(12px, 2vw, 38px);
+  margin: 10px;
+}
+.client-number {
+  display: flex;
+  color: rgb(241, 190, 172);
+  font-size: clamp(12px, 2vw, 28px);
+  font-weight: bolder;
+}
+.green-yellow {
+  color: rgb(229, 255, 0);
+}
+/* search */
+.car-search {
+  display: block;
+
+  max-width: 100%;
+  background-color: #c8ccce;
+  margin: -25px 30px 30px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  resize: both;
+  overflow: auto;
+}
+fieldset {
+  border: none;
+  margin: 15px;
+}
+label {
+  color: #424445;
+}
+.small-input {
+  width: 80px;
+}
+.search-button {
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(229, 161, 34);
+  max-width: 100%;
+}
+.model-header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  max-width: 100%;
+  margin: 15px;
+}
+
+.model-header a {
+  color: #ff0000;
+}
+.flex {
+  display: flex;
+}
+.choose-option {
+  color: rgb(23, 10, 209);
+  text-decoration: underline;
+  text-decoration-color: #ff5722;
+  text-decoration-thickness: 2px;
+}
+.models {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.car-list {
+  position: relative;
+  background-color: #cfdaf0;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgb(132, 132, 132);
+}
+.car-list img {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.pentagon {
+  position: absolute;
+  top: 10px;
+  width: 60px;
+  height: 30px;
+  background-color: #fc8309;
+  clip-path: polygon(0% 0%, 100% 0%, 80% 50%, 100% 100%, 0% 100%);
+  z-index: 2;
+}
+.pentagon p {
+  padding: 5px;
+}
+.car-list-hover {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  overflow:hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+.car-list-hover-cart {
+  width: 200px;
+  margin: 20px auto;
+}
+.car-list-cart {
+  background-color: rgb(236, 179, 7);
+  color: black;
+  padding: 8px;
+}
+.car-list-cart {
+  font-size: 12px;
+  color: #232f24;
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.car-list-cart:hover {
+  color: #ff5722;
+  transform: scale(1.2);
+}
+.car-list-contact {
+  background-color: rgb(59, 92, 238);
+  color: white;
+  padding: 8px;
+}
+.car-list-contact {
+  font-size: 12px;
+  color: #232f24;
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.car-list-contact:hover {
+  color: #ff5722;
+  transform: scale(1.2);
+}
+.car-list-details {
+  display: flex;
+  justify-content: space-around;
+}
+.car-list-details .Details {
+  color: white;
+  font-size: large;
+}
+.car-list-details .Details:hover {
+  color: rgb(239, 72, 72);
+  text-decoration: underline;
+}
+.car-model-button {
+  position: absolute;
+  padding: 5px 20px 5px 35px;
+  width: 10em;
+  background-color: rgb(229, 161, 34);
+  left: 40%;
+  align-self: flex-end;
+  margin: -30px;
+}
+.car-model-button button {
+  background-color: rgb(229, 161, 34);
+  border: none;
+  margin: auto;
+}
+.model-name {
+  font-size: larger;
+  font-weight: bold;
+}
+s {
+  color: #a2a5a6;
+}
+.car-description {
+  margin: 0px 15px;
+}
+.car-description {
+  width: 100%;
+}
+.model-price {
+  font-size: larger;
+  font-weight: bold;
+}
+.rating span {
+  font-size: 2rem;
+  color: #f90;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.rating span:hover,
+.rating span:hover ~ span {
+  color: #f90;
+}
+.car-list:hover .car-list-hover {
+  bottom: 0;
+  height: 100%;
+}
+
+.sell-container {
+  background-color: rgb(70, 70, 70);
+  margin: 60px 0px;
+  overflow: hidden;
+}
+.sell-container .text {
+  float: left;
+  width: 50%;
+}
+.sell-container .text .car-list-hover-cart .car-list-contact {
+  background-color: rgb(230, 180, 15);
+}
+.sell-container img {
+  max-width: 100%;
+  float: right;
+  width: 50%;
+}
+.seller-list li {
+  display: flex;
+}
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid #4caf50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4caf50;
+  font-size: 9px;
+  margin-right: 10px;
+}
+.mark {
+  font-size: 10px;
+}
+/* testimonials */
+.Testimonials-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-bottom: 3em;
+}
+.Testimonials h2 {
+  margin-bottom: 20px;
+}
+
+.sample-testimonial {
+  background-color: #d8dadb;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: slide;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+}
+.circle-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -30px;
+  margin-left: 20px;
+  border: solid white 5px;
+}
+.circle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* gallery */
+.gallery-wrapper a img {
+  max-width: 100%;
+}
+
+.partner-wrapper img {
+  max-width: 100%;
+  width: 100%;
+}
+.underlined-text {
+  font-weight: 300;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+  color: #ff0000;
+}
+.underlined-text:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  bottom: 0;
+  left: 25%;
+  border-bottom: 2px solid rgb(255, 157, 0);
+}
+/* discuss */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-color: rgb(170, 166, 166);
+}
+.discuss {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  color: #ffffff;
+}
+.discuss button {
+  width: 200px;
+  padding: 10px;
+  background-color: #c8ccce;
+  border-radius: 10px;
+}
+.contact-wrapper form {
+  height: 90%;
+  background-color: #e4e7e9;
+  margin: 20px;
+  border-radius: 15px;
+}
+.contact-button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 5px;
+}
+.contact-button:hover {
+  background-color: black;
+  color: white;
+}
+.selected {
+  background-color: black;
+  color: white;
+}
+.contact-input {
+  border: none;
+  width: 95%;
+  margin: 10px;
+  padding: 5px;
+}
+/* footer */
+.footer-wrapper {
+  background-color: #0d2145;
+  color: wheat;
+  padding: 25px;
+}
+.above-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.schedule-button {
+  background-color: #e36a0d;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+/* .test-drive{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+} */
+footer form {
+  margin: -20px;
+}
+.buttom-email {
+  padding: 15px;
+  width: 300px;
+}
+.buttom-signup {
+  position: absolute;
+  margin: 12px -80px 0;
+}
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: space-evenly;
+}
+.footer-nav a {
+  text-decoration: none;
+  color: wheat;
+  list-style: none;
+}
+.footer-nav ul {
+  width: 100px;
+}
+.small-hidden {
+  display: block;
+}
+.footer-nav ul:hover {
+  .small-hidden {
+    display: block;
+  }
+}
+.footer-nav ul li {
+  margin: 10px;
+}
+.footer-nav a:hover {
+  text-decoration: none;
+  color: rgb(255, 140, 0);
+}
+.small-block {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .small-hidden {
+    display: none;
+  }
+  .small-block {
+    display: block !important;
+  }
+
+  .menu-icon {
+    font-size: 40px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .menu-icon:hover {
+    transform: rotate(90deg);
+    color: #007bff;
+  }
+
+  .menu-icon:hover .small-hidden {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 150px;
+  }
+}
+.service-page-header {
+  background-image: url("./Resource/Images/tesla_scenic_mountain_1_2400.jpg.webp") !important;
+  background-repeat: no-repeat;
+  height: 700px;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  background-color: rgba(89, 116, 136, 0.5);
+  backdrop-filter: blur(5px);
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin-top: 50px;
+}
+ .about-page-header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .about-page-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .about-page-about-page-intro {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .about-page-intro h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-page-intro p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .about-page-values {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .about-page-value{
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 1rem);
+            text-align: center;
+        }
+
+        .about-page-value h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-page-value p {
+            color: #777;
+        }
+.compare-page-header {
+  margin-top: 100px;
+}
+.cart-page-header {
+  margin: 100px;
+}
+.cart-page-header {
+  margin-top: 100px;
+}
+.schedule-page-header {
+  padding: 100px;
+}
+.sign-up-page-header {
+  padding: 50px;
+}
+.sign-up-page-form {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 60%;
+  margin: auto;
+  border-radius: 20px;
+}
+.sign-up-input {
+  padding: 10px;
+  width: 100%;
+  margin: 5px;
+}
+.sign-up-input-submit {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.sign-up-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../Resource/Images/login.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.sign-up-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.sign-up-form h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.sign-up-form p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sign-up-form input[type="text"],
+.sign-up-form input[type="email"],
+.sign-up-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.sign-up-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+.sign-up-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.sign-up-form input[type="submit"]:hover {
+    background-color: darkblue;
+}
+.sign-up-form a {
+    color: blue;
+    text-decoration: none;
+}
+.sign-up-form a:hover {
+    text-decoration: underline;
+}
+.page-header {
+  margin-top: 60px;
+}
+/* cart notification number*/
+.cart-number{
+  background-color:#0000ff !important;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left:50%;
+
+}
+/* end of cart notification */
+/*  drop*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+   position: absolute;
+  right: 0px;
+        height: 200px;
+        top: 37px;
+        width: 100%;
+        background-color: rgba(180, 178, 176, 0.7);
+        z-index: 1;
+        display:none;
+        flex-direction: column;
+        align-items: center;
+        width: 100px;
+        transition: transform 0.5s ease-in;
+border-radius: 20px ;
+}
+
+.dropdown:hover .dropdown-content {
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.car_type{
+  color: #ff2424;
+  text-align: center;
+}
+#news-text p{
+  color: #cfdaf0;
+  margin: 30px;
+  font-size: larger;
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.no-of-client {
+  animation: counterClients 2s forwards ease-in-out;
+  counter-reset: num var(--num);
+  font: 800 40px system-ui;
+  padding: 2rem;
+}
+.no-of-client::before {
+  content: counter(num);
+}
+
+@property --nums {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.no-of-car {
+  animation: counterCars 2s forwards ease-in-out;
+  counter-reset: nums var(--nums);
+  font: 800 40px system-ui;
+  padding: 2rem;
+}
+.no-of-car::before {
+  content: counter(nums);
+}
+.experience-year {
+  animation: counterCarss 2s forwards ease-in-out;
+  counter-reset: nums var(--nums);
+  font: 800 40px system-ui;
+  padding: 2rem;
+}
+.experience-year::before {
+  content: counter(nums);
+}
+
+@keyframes counterClients {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 900;
+  }
+}
+
+@keyframes counterCars {
+  from {
+    --nums: 0;
+  }
+  to {
+    --nums: 500;
+  }
+}
+
+@keyframes counterCarss {
+  from {
+    --nums: 0;
+  }
+  to {
+    --nums: 10;
+  }
+}
+
+/*upload page css style start here */
+.upload-form-wrapper{
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+}
+.upload-form{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,300px);
+  width: 700px;
+  justify-content: right;   
+}
+/*  */
