@@ -1,14 +1,28 @@
 <?php
-// Including the database class (if in a separate file)
-include_once('DBController.php');
+include_once __DIR__.'/../Core/Database.php';
+use App\Core\Database;
 
-// Create a new instance of DBController
-$db = new DBController();
+class CreateTable{
 
-// Get the connection object
-$conn = $db->getConnection();
+    private mysqli $db;
 
-//query to creat car list table
+    public function __construct()
+    {
+        $this->db = Database::getInstance()->getConnection();
+    }
+
+    public function creatUser(){
+        
+    }
+
+    public function getConnection() {
+        return $this->db;
+    }
+
+}
+
+$dbConn= new CreateTable();
+$conn=$dbConn->getConnection();
 $sql="CREATE TABLE IF NOT EXISTS cars (
     id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -25,13 +39,12 @@ $sql="CREATE TABLE IF NOT EXISTS cars (
     registerDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (seller_id) REFERENCES users(id) ON DELETE SET NULL
     )";
-
 try{
 $conn->query($sql);
-
-// echo "table is created successfully"."<br>";
+echo "table is created successfully"."<br>";
 }catch(mysqli_sql_exception $e){
     die("unable to connect ".$e->getMessage());
 }
+
 
 ?>

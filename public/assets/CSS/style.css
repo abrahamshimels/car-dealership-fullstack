@@ -122,7 +122,7 @@ a {
 
 /* banner style */
 .banner {
-  background-image: url("../Resource/Images/R35-GTR-EDIT-4K-ezgif.com-video-to-gif-converter.gif");
+  background-image: url("../Images/R35-GTR-EDIT-4K-ezgif.com-video-to-gif-converter.gif");
   background-repeat: no-repeat;
   height: 38rem;
   background-position: center;
@@ -580,7 +580,7 @@ footer form {
   }
 }
 .service-page-header {
-  background-image: url("./Resource/Images/tesla_scenic_mountain_1_2400.jpg.webp") !important;
+  background-image: url("../Images/tesla_scenic_mountain_1_2400.jpg.webp") !important;
   background-repeat: no-repeat;
   height: 700px;
   background-position: center;
@@ -689,7 +689,7 @@ footer form {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(../Resource/Images/login.png);
+    background-image: url("../Images/login.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -872,4 +872,92 @@ border-radius: 20px ;
   width: 700px;
   justify-content: right;   
 }
-/*  */
+/* for car schedule table  */
+
+.car-list-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.car-list-section h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #3498db;
+}
+
+.car-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.car-list-table thead tr {
+  background-color: #3498db;
+  color: white;
+  text-align: left;
+}
+
+.car-list-table th,
+.car-list-table td {
+  padding: 1rem 1.5rem;
+  line-height: 1.6;
+}
+
+.car-list-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  transition: all 0.2s ease;
+}
+
+.car-list-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.car-list-table tbody tr:last-of-type {
+  border-bottom: 2px solid #3498db;
+}
+
+.car-list-table tbody tr:hover {
+  background-color: #e3f2fd;
+  transform: translateX(4px);
+}
+
+.car-list-table td {
+  color: #444;
+}
+
+.car-list-section p {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #e3f2fd;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .car-list-table {
+      display: block;
+      overflow-x: auto;
+  }
+  
+  .car-list-section {
+      padding: 1rem;
+      margin: 1rem;
+  }
+  
+  .car-list-table th,
+  .car-list-table td {
+      padding: 0.75rem;
+      font-size: 0.9rem;
+  }
+}
