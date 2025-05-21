@@ -37,8 +37,8 @@
 
 ## 👥 Team Members
 
-- **Abraham Shimels     abrahamshimels**
-- **Abenezer Yirgalem   AbeniYirgalem**
-- **Abenezer Daniel     Abez132**
-- **Abraham Sisay       absiso**
-- **Lidia Aliso         lydia-jc**
+- **[Abraham Shimels](https://github.com/abrahamshimels)**
+- **[Abenezer Yirgalem](https://github.com/AbeniYirgalem)**
+- **[Abenezer Daniel](https://github.com/Abez132)**
+- **[Abraham Sisay](https://github.com/absiso)**
+- **[Lidia Aliso](https://github.com/lydia-jc)**
