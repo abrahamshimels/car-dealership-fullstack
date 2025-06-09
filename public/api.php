@@ -11,8 +11,11 @@ header('Access-Control-Allow-Origin: *');
 $method = $_SERVER['REQUEST_METHOD'];
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // echo $uri;
-
-$path = str_replace('/car-dealership-fullstack/public', '', $uri); 
+// Normalize path (remove `/car-dealership-fullstack/public` if needed)
+$path = str_replace('/car-dealership-fullstack/public', '', $uri); // Adjust if project is in subfolder
+// echo "<br>";
+// echo $path;
+// Instantiate the controller
 $controller = new CarApiController();
 
 // ROUTING LOGIC
