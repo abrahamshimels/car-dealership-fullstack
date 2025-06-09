@@ -1,0 +1,13 @@
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteBase /car-dealership-fullstack/  # Match your project folder name in "www"
+
+#     # Redirect Trailing Slashes...
+#     RewriteCond %{REQUEST_FILENAME} !-d
+#     RewriteRule ^(.*)/$ /car-dealership-fullstack/$1 [L,R=301]
+
+#     # Handle Front Controller (All requests to index.php)
+#     RewriteCond %{REQUEST_FILENAME} !-d
+#     RewriteCond %{REQUEST_FILENAME} !-f
+#     RewriteRule ^ index.php [L]
+# </IfModule>
