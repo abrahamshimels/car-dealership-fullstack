@@ -163,10 +163,8 @@ if($_SERVER['REQUEST_METHOD']=="POST" && isset($_POST['car_id']))
             </form>
         </div>
         <div class="col-md-4 text-md-end mt-3 mt-md-0">
-            <a href="/car-dealership-fullstack/App/views/layouts/uploadCar.php" class="text-decoration-none">
-                <button type="button" class="btn btn-success btn-lg">
-                    <i class="fas fa-plus-circle me-2"></i> Add New Car
-                </button>
+            <a href="/car-dealership-fullstack/App/views/layouts/uploadCar.php" class="btn btn-success btn-lg text-decoration-none">
+                <i class="fas fa-plus-circle me-2"></i> Add  Car
             </a>
         </div>
     </div>

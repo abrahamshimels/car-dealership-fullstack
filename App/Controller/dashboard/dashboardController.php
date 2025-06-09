@@ -22,6 +22,7 @@ $stmt->close();
 echo $sessionUsername;
 echo $userRole;
 if($userRole=='admin'){
+    $_SESSION['role'] = $userRole;
     header("Location: /car-dealership-fullstack/App/views/admin/dashboard.php");
     exit();
 }else{

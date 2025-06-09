@@ -29,8 +29,22 @@
                 ?>
                 <?php 
                 if(isset($_SESSION['username'])){
-                    echo '<a class="small-hidden active" href="/car-dealership-fullstack/App/controller/dashboard/dashboardController.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>';
-                }else{
+                        $sessionUsername = $_SESSION['username'];
+$stmt = $conn->prepare("SELECT role FROM users WHERE username = ?");
+$stmt->bind_param("s", $sessionUsername);
+$stmt->execute();
+$stmt->bind_result($userRole);
+$stmt->fetch();
+$stmt->close();
+
+echo $sessionUsername;
+echo $userRole;
+if($userRole=='admin'){
+    echo '<a class="active" href="/car-dealership-fullstack/App/views/auth/login.php" class="small-hidden">admin <i class="fas fa-user"></i></a>';
+}else{
+    echo '<a class="active" href="/car-dealership-fullstack/App/views/auth/login.php" class="small-hidden">account <i class="fas fa-user"></i></a>';
+}
+}else{
                     echo '<a class="active" href="/car-dealership-fullstack/App/views/auth/login.php" class="small-hidden">account <i class="fas fa-user"></i></a>';    }
                 ?> 
                 <div class="dropdown small-block">
