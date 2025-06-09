@@ -1,4 +1,4 @@
-# G3 Car DealershipAdd commentMore actions
+# G3 Car Dealership
 
 **G3 Car Dealership** is a full-stack web application built using **pure PHP**, **HTML**, **CSS**, **JavaScript**, and **MySQL**. It enables users to buy and sell cars online, schedule test drives, and communicate with sellers — all within a custom-built, MVC-structured platform.
 
